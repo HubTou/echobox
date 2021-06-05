@@ -71,17 +71,16 @@ https://en.wikipedia.org/wiki/Box-drawing_character
 https://unicode-table.com/fr/#box-drawing
 
 ## STANDARDS
-The echobox command is not a standard [UNIX](https://en.wikipedia.org/wiki/Unix)/[POSIX](https://en.wikipedia.org/wiki/POSIX) command.
+The **echobox** command is not a standard [UNIX](https://en.wikipedia.org/wiki/Unix)/[POSIX](https://en.wikipedia.org/wiki/POSIX) command.
 
 It tries to follow the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for [Python](https://www.python.org/) code.
-We check this with the [Pylint](https://www.pylint.org/) command.
 
 ## PORTABILITY
 Tested OK under Windows, though some of the styles are not available
 (the [hatched and curved Unicode characters](https://unicode-table.com/fr/#box-drawing) are not fully recognized in the cmd.exe and PowerShell command prompts).
 
 ## HISTORY
-The echobox command was created as an example for the [PNU / PyNIX project](https://github.com/HubTou/PNU), demonstrating how to process the environment and the command line, and use the [Python logging module](https://docs.python.org/3/library/logging.html).
+The **echobox** command was created as an example for the [PNU / PyNIX project](https://github.com/HubTou/PNU), demonstrating how to process the environment and the command line, and use the [Python logging module](https://docs.python.org/3/library/logging.html).
 
 ## LICENSE
 This utility is available under the [3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause).
