@@ -24,7 +24,7 @@ echobox - write arguments in a box to the standard output
 
 ## DESCRIPTION
 The **echobox** utility writes any specified operands, separated by single blank (' ') characters, in a box, to the standard output.
-The "\n" substring is used to split the concatened operands into multiple lines.
+The "\n" substring is used to split the concatenated operands into multiple lines.
 
 If there are no arguments provided on the command line, standard input is read.
 
