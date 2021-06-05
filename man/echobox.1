@@ -1,0 +1,136 @@
+.TH ECHOBOX 1
+.SH NAME
+echobox \- write arguments in a box to the standard output
+.SH SYNOPSIS
+.B echobox
+[\-a|\-\-align name]
+[\-b|\-\-basic-char char]
+[\-f|\-\-fill-char char]
+[\-i|\-\-inter-lines number]
+[\-l|\-\-lead-lines number]
+[\-S|\-\-style name]
+[\-s|\-\-spaces number]
+[\-t|\-\-trail-lines number]
+[\-\-debug]
+[\-\-help|\-?]
+[\-\-version]
+[\-\-]
+.IR "[string ...]"
+.SH DESCRIPTION
+The
+.B echobox
+utility writes any specified operands, separated by single blank (' ') characters, in a box, to the standard output.
+The "\\n" substring is used to split the concatenated operands into multiple lines.
+.PP
+If there are no arguments provided on the command line, standard input is read.
+.SH OPTIONS
+.TP
+.BR \-a|\-\-align " name"
+Sets the alignment to use.
+Possible values: left (default), center, middle, right.
+.TP
+.BR \-b|\-\-basic-char " char"
+Sets the character to use with the basic style.
+Default value: '#'.
+.TP
+.BR \-f|\-\-fill-char " char"
+Sets the character to use to fill the box.
+Default value: ' '.
+.TP
+.BR \-i|\-\-inter-lines " number"
+Sets the number of lines separating the text from the box on the top and bottom sides.
+Default value: 1.
+.TP
+.BR \-l|\-\-lead-lines " number"
+Sets the number of blank lines preceding the box.
+Default value: 0.
+.TP
+.BR \-S|\-\-style " name"
+Sets the style to use.
+Possible values: basic (default), ascii, single, curved, hatched, double, block.
+.TP
+.BR \-s|\-\-spaces " number"
+Sets the number of spaces separating the text from the box on the left and right sides.
+Default value: 3.
+.TP
+.BR \-t|\-\-trail-lines " number"
+Sets the number of blank lines following the box.
+Default value: 1.
+.TP
+.BR \-\-debug
+Enable debug level messages.
+.TP
+.BR \-\-help|\-?
+Print usage and a short help message and exit.
+.TP
+.BR \-\-version
+Print version and exit.
+.TP
+.BR \-\-
+Options processing terminator.
+Contrarily to the echo(1) command, it is recognized as such.
+.SH ENVIRONMENT
+Environment variables are processed first and thus overridden by command line options.
+.TP
+.BR ECHOBOX_STYLE
+Sets the style to use.
+.TP
+.BR ECHOBOX_ALIGN
+Sets the alignment to use.
+.TP
+.BR ECHOBOX_BASIC_CHAR
+Sets the character to use with the basic style.
+.TP
+.BR ECHOBOX_FILL_CHAR
+Sets the character to use to fill the box.
+.TP
+.BR ECHOBOX_SPACES
+Sets the number of spaces separating the text from the box on the left and right sides.
+.TP
+.BR ECHOBOX_INTER_LINES
+Sets the number of lines separating the text from the box on the top and bottom sides.
+.TP
+.BR ECHOBOX_LEAD_LINES
+Sets the number of blank lines preceding the box.
+.TP
+.BR ECHOBOX_TRAIL_LINES
+Sets the number of blank lines following the box.
+.TP
+.BR ECHOBOX_DEBUG
+Enable debug level messages.
+.TP
+.BR COLUMNS
+Defines the number of columns in the terminal window.
+This variable is sometimes provided by the Bash shell and some others, but not necessarily exported.
+It's used for center and right alignments.
+Default value: 80.
+.SH EXIT STATUS
+The
+.B echobox
+utility exits 0 on success, and >0 if an error occurs.
+.SH SEE ALSO
+dialog(1)
+.PP
+https://en.wikipedia.org/wiki/Box-drawing_character
+.PP
+https://unicode-table.com/fr/#box-drawing
+.SH STANDARDS
+The
+.B echobox
+command is not a standard UNIX/POSIX command.
+.PP
+It tries to follow the PEP 8 style guide for Python code (see https://www.python.org/dev/peps/pep-0008/).
+.SH PORTABILITY
+Tested OK under Windows, though some of the styles are not available (the hatched and curved Unicode characters are not fully recognized in the cmd.exe and PowerShell command prompts).
+.SH HISTORY
+The
+.B echobox
+command was created as an example for the PNU / PyNIX project, demonstrating how to process the environment and the command line, and use the Python logging module.
+.SH LICENSE
+This utility is available under the 3-clause BSD license (see https://opensource.org/licenses/BSD-3-Clause).
+.SH AUTHORS
+Hubert Tournier
+.SH BUGS
+Specifying a basic or fill Unicode characters is not currently possible with the environment and command line options.
+.PP
+Display will overflow if your text is wider than your console.
