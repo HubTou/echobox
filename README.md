@@ -1,3 +1,6 @@
+# Installation
+pip install [pnu-echobox](https://pypi.org/project/pnu-echobox/)
+
 # ECHOBOX(1)
 
 ## NAME
