@@ -92,3 +92,4 @@ This utility is available under the [3-clause BSD license](https://opensource.or
 ## CAVEATS
 Specifying a basic or fill [Unicode](https://home.unicode.org/) characters is not currently possible with the environment and command line options.
 
+Display will overflow if your text is wider than your console.
