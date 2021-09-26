@@ -12,7 +12,7 @@ import shutil
 import sys
 
 # Version string used by the what(1) and ident(1) commands:
-ID = "@(#) $Id: echobox - write arguments in a box to the standard output v1.2.1 (September 26, 2021) by Hubert Tournier $"
+ID = "@(#) $Id: echobox - write arguments in a box to the standard output v1.2.2 (September 26, 2021) by Hubert Tournier $"
 
 # Cf. https://en.wikipedia.org/wiki/Box-drawing_character
 # Cf. https://unicode-table.com/fr/#box-drawing

@@ -82,9 +82,11 @@ Tested OK under Windows, though some of the styles are not available
 (the [hatched and curved Unicode characters](https://unicode-table.com/fr/#box-drawing) are not fully recognized in the cmd.exe and PowerShell command prompts).
 
 ## HISTORY
-The **echobox** command was created as an example for the [PNU project](https://github.com/HubTou/PNU), demonstrating how to process the environment and the command line, and use the [Python logging module](https://docs.python.org/3/library/logging.html).
+The **echobox** command was created as an example for the [PNU project](https://github.com/HubTou/PNU),
+demonstrating how to process the environment and the command line, and use the [Python logging module](https://docs.python.org/3/library/logging.html).
 
-It's also used as a filter for fortune output, in order to introduce some [boxology](http://www.catb.org/jargon/html/B/boxology.html).
+It's also used as a filter for [fortune(6)](https://github.com/HubTou/fortune/blob/main/README.md) output,
+in order to introduce some [boxology](http://www.catb.org/jargon/html/B/boxology.html).
 
 ## LICENSE
 This utility is available under the [3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause).
