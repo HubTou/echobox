@@ -12,7 +12,7 @@ import shutil
 import sys
 
 # Version string used by the what(1) and ident(1) commands:
-ID = "@(#) $Id: echobox - write arguments in a box to the standard output v1.2.0 (June 5, 2021) by Hubert Tournier $"
+ID = "@(#) $Id: echobox - write arguments in a box to the standard output v1.2.1 (September 26, 2021) by Hubert Tournier $"
 
 # Cf. https://en.wikipedia.org/wiki/Box-drawing_character
 # Cf. https://unicode-table.com/fr/#box-drawing
@@ -88,6 +88,14 @@ parameters = {
     "Internal lines": 1,
     "Trailing lines": 1,
 }
+
+
+################################################################################
+def initialize_debugging(program_name):
+    """Debugging set up"""
+    console_log_format = program_name + ": %(levelname)s: %(message)s"
+    logging.basicConfig(format=console_log_format, level=logging.DEBUG)
+    logging.disable(logging.INFO)
 
 
 ################################################################################
@@ -449,10 +457,8 @@ def print_blank_lines(nb_lines):
 def main():
     """The program's main entry point"""
     program_name = os.path.basename(sys.argv[0])
-    console_log_format = program_name + ": %(levelname)s: %(message)s"
-    logging.basicConfig(format=console_log_format, level=logging.DEBUG)
-    logging.disable(logging.INFO)
 
+    initialize_debugging(program_name)
     process_environment_variables()
     arguments = process_command_line()
 

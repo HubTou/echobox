@@ -65,7 +65,8 @@ COLUMNS | Defines the number of columns in the terminal window. This variable is
 The **echobox** utility exits 0 on success, and >0 if an error occurs.
 
 ## SEE ALSO
-[dialog(1)](https://www.freebsd.org/cgi/man.cgi?query=dialog)
+[dialog(1)](https://www.freebsd.org/cgi/man.cgi?query=dialog),
+[fortune(6)](https://github.com/HubTou/fortune/blob/main/README.md)
 
 https://en.wikipedia.org/wiki/Box-drawing_character
 
@@ -81,7 +82,9 @@ Tested OK under Windows, though some of the styles are not available
 (the [hatched and curved Unicode characters](https://unicode-table.com/fr/#box-drawing) are not fully recognized in the cmd.exe and PowerShell command prompts).
 
 ## HISTORY
-The **echobox** command was created as an example for the [PNU / PyNIX project](https://github.com/HubTou/PNU), demonstrating how to process the environment and the command line, and use the [Python logging module](https://docs.python.org/3/library/logging.html).
+The **echobox** command was created as an example for the [PNU project](https://github.com/HubTou/PNU), demonstrating how to process the environment and the command line, and use the [Python logging module](https://docs.python.org/3/library/logging.html).
+
+It's also used as a filter for fortune output, in order to introduce some [boxology](http://www.catb.org/jargon/html/B/boxology.html).
 
 ## LICENSE
 This utility is available under the [3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause).
@@ -90,6 +93,7 @@ This utility is available under the [3-clause BSD license](https://opensource.or
 [Hubert Tournier](https://github.com/HubTou)
 
 ## CAVEATS
-Specifying a basic or fill [Unicode](https://home.unicode.org/) characters is not currently possible with the environment and command line options.
+Specifying basic or fill [Unicode](https://home.unicode.org/) characters is not currently possible with the environment and command line options.
 
 Display will overflow if your text is wider than your console.
+
